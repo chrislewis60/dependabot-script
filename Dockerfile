@@ -11,4 +11,4 @@ RUN bundle config set --local path "vendor" \
 
 COPY --chown=dependabot:dependabot . ${CODE_DIR}
 COPY --chown=dependabot:dependabot npmrc-docker.sh ${ROOT_DIR}
-CMD bash ../npmrc-docker.sh && bundle exec ruby ./generic-update-script.rb
+CMD bash ../npmrc-docker.sh && npm config list && bundle exec ruby ./generic-update-script.rb
